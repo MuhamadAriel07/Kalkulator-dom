@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <meta charset="UTF-8">
     <title>Kalkulator Sederhana</title>
-</head>
-<body>
-    <h2>JavaScript Validation</h2>
-    <p>Please input a number between 1 and 10:</p>
-
-<input type="number" id="angka1">
-<input type="number" id="angka2">
-<button class="operator" value="+">+</button>
-<button class="operator" value="-">-</button>
-<button class="operator" value="*">&times;</button>
-<button class="operator" value="/">/</button>
-
-<p id="demo"></p>
-
-<script>
-function Submit() {
-    let angka1 = parseFloat(document.getElementById("angka1").value);
-    let angka2 = parseFloat(document.getElementById("angka2").value);
-    const ops = document.getElementById("operator").value;
-
-    ops.forEach(button => {
-        button.addEventListener('click', () => {
-        const operator = button.value;
-        let text;
-
-    switch (operator) {
-    case '+':
-        text = angka1 + angka2;
-        break;
-    case '-':
-        text = angka1 - angka2;
-        break;
-    case '*':
-        text = angka1 * angka2;
-        break;
-    case '/':
-        text = angka1 / angka2;
-        break;
-    }
-
-    document.getElementById("demo").innerHTML = text;
-    });
-});
-}
-</script>
-</body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <table border="1" cellspacing="0">
+        <tr>
+          <td colspan="4">
+            <input type="number" id="input1" placeholder="Masukkan angka pertama">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <input type="number" id="input2" placeholder="Masukkan angka kedua">
+          </td>
+        </tr>
+        <tr>
+          <td><button class="operator" onclick="setOperator(this);">/</button></td>
+          <td><button class="operator" onclick="setOperator(this);">*</button></td>
+          <td><button class="operator" onclick="setOperator(this);">-</button></td>
+          <td><button class="operator" onclick="setOperator(this);">+</button></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div id="result"></div>
+          </td>
+          <td><button onclick="reset()">AC</button></td>
+        </tr>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
