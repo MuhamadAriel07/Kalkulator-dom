@@ -1,45 +1,85 @@
 * {
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-  }
-  body {
-    background-color: #3fb399;
-  }
-  .container {
-    width: 320px;
-    background-color: white;
-    margin: 120px auto;
-  }
-  table {
+    border-radius: 10px;
+}
+
+body {
+    /* background-image: url(https://images.unsplash.com/photo-1579547621113-e4bb2a19bdd6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=339&q=80);
+    background-repeat: repeat-x; */
+    background-image: url('navy.jpg');
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper {
     width: 100%;
-    border-color: #f4f4f4;
-  }
-  td {
-    width: 25%;
-  }
-  input[type="number"] {
+    background-color: #061a40;
+    max-width: 1100px;
+}
+
+table {
     width: 100%;
-    height: 70px;
-    font-size: 24px;
-    text-align: right;
-    border: none;
-  }
-  #inputLabel {
-    height: 120px;
-    font-size: 40px;
-    vertical-align: bottom;
-    text-align: right;
-    padding-right: 16px;
-    background-color: #ececec;
-  }
-  button {
-    width: 100%;
-    height: 70px;
-    font-size: 24px;
-    background-color: white;
-    border: none;
-  }
-  button.operator {
-    background-color: #6fa4dc;
+    padding: 20px;
+}
+
+td {
+    width: 20%;
+    padding: 5px;
+}
+
+h1 {
+    text-align: center;
+    color: #ffd819;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 0;
+}
+
+p {
+    text-align: center;
     color: white;
-  }
+    margin:0;
+}
+
+input {
+    width: 100%;
+    height: 70px;
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    border: none;
+}
+
+#result {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Anton', sans-serif;
+    align-items: center;
+    background-color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    background-color: #ff0a54;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #c9184a;
+}
+.operator {
+    background-color: #6fa4dc;
+}
+
+.operator:hover {
+    background-color: #0353a4;
+}

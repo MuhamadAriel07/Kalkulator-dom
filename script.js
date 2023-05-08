@@ -1,40 +1,40 @@
-var input1 = document.getElementById('input1');
-var input2 = document.getElementById('input2');
-var result = document.getElementById('result');
-var operator = '';
+let input1 = document.getElementById('input1');
+let input2 = document.getElementById('input2');
+let result = document.getElementById('result');
+let operator = '';
 
 function setOperator(obj) {
-  if (input1.value != '' && input2.value != '') {
-    operator = obj.innerHTML;
-    calculate();
-  }
+    if (input1.value != '' && input2.value != '') {
+        operator = obj.innerHTML;
+        calculate();
+    }
 }
 
 function calculate() {
-  var val1 = parseFloat(input1.value);
-  var val2 = parseFloat(input2.value);
+    let val1 = parseFloat(input1.value);
+    let val2 = parseFloat(input2.value);
 
-  switch (operator) {
-    case '+':
-      result.innerHTML = val1 + val2;
-      break;
-    case '-':
-      result.innerHTML = val1 - val2;
-      break;
-    case '*':
-      result.innerHTML = val1 * val2;
-      break;
-    case '/':
-      result.innerHTML = val1 / val2;
-      break;
-    default:
-      result.innerHTML = '';
-  }
+    switch (operator) {
+        case '+':
+        result.innerHTML = val1 + val2;
+        break;
+        case '-':
+        result.innerHTML = val1 - val2;
+        break;
+        case '*':
+        result.innerHTML = val1 * val2;
+        break;
+        case '/':
+        result.innerHTML = val1 / val2;
+        break;
+        default:
+        result.innerHTML = '';
+    }
 }
 
 function reset() {
-  input1.value = '';
-  input2.value = '';
-  result.innerHTML = '';
-  operator = null;
-  }
+    input1.value = '';
+    input2.value = '';
+    result.innerHTML = '';
+    operator = null;
+}
